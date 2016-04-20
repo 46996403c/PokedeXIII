@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/lista_pokemon"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Lista Pokemon" />
+        <item
+            android:id="@+id/lista_types"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Lista tipos" />
+        <item
+            android:id="@+id/favoritos"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Favoritos " />
+
+    </group>
+
+    <item android:title="Redes Sociales">
+        <menu>
+            <item
+                android:id="@+id/facebook_pokemon"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Facebook Pokemon" />
+            <item
+                android:id="@+id/youtube_pokemon"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="Youtube Pokemon" />
+        </menu>
+    </item>
+
+</menu>

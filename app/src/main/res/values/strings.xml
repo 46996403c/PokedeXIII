@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PokedeXIII</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_pokedex">Pokedex</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_pokemon_details">PokemonDetails</string>
+    <string name="title_activity_adapter_type_pokemon">Tipos Pokemon</string>
+</resources>

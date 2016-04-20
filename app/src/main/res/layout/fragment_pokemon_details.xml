@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="oscarxiii.pokedexiii.PokemonDetailsFragment"
+    tools:showIn="@layout/activity_pokemon_details">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre: "
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NombreDetailsPokemon"
+        android:id="@+id/nombreDetailsPokemon"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso: "
+        android:id="@+id/textView4"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PesoDetailsPokemon"
+        android:id="@+id/pesoDetailsPokemon"
+        android:layout_below="@+id/nombreDetailsPokemon"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HP:"
+        android:id="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ataque:"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HpDetailsPokemon"
+        android:id="@+id/hpDetailsPokemon"
+        android:layout_alignLeft="@+id/pesoDetailsPokemon"
+        android:layout_alignStart="@+id/pesoDetailsPokemon"
+        android:layout_below="@+id/pesoDetailsPokemon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AtaqueDetailsPokemon"
+        android:id="@+id/ataqueDetailsPokemon"
+        android:layout_below="@+id/textView6"
+        android:layout_alignLeft="@+id/hpDetailsPokemon"
+        android:layout_alignStart="@+id/hpDetailsPokemon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo:"
+        android:id="@+id/textView8"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TipoDetailsPokemon"
+        android:id="@+id/tipoDetailsPokemon"
+        android:layout_below="@+id/defensaDetailsPokemon"
+        android:layout_alignLeft="@+id/defensaDetailsPokemon"
+        android:layout_alignStart="@+id/defensaDetailsPokemon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Defensa:"
+        android:id="@+id/textView9"
+        android:layout_below="@+id/textView7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DefensaDetailsPokemon"
+        android:id="@+id/defensaDetailsPokemon"
+        android:layout_below="@+id/ataqueDetailsPokemon"
+        android:layout_alignLeft="@+id/ataqueDetailsPokemon"
+        android:layout_alignStart="@+id/ataqueDetailsPokemon" />
+
+</RelativeLayout>
