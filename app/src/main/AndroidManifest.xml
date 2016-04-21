@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,11 +23,21 @@
         <activity
             android:name=".PokemonDetails"
             android:label="@string/title_activity_pokemon_details"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <provider
-            android:name="oscarxiii.pokedexiii.provider.PokemonProvider"
+            android:name=".provider.PokemonProvider"
             android:authorities="oscarxiii.pokedexiii.provider"
             android:exported="false" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".Pokedex">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="oscarxiii.pokedexiii.Pokedex" />
+        </activity>
     </application>
 
 </manifest>

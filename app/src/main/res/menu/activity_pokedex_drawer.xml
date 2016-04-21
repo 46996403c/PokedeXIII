@@ -4,16 +4,16 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/lista_pokemon"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/bul"
             android:title="Lista Pokemon" />
         <item
             android:id="@+id/lista_types"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/esq"
             android:title="Lista tipos" />
         <item
             android:id="@+id/favoritos"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Favoritos " />
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Opciones" />
 
     </group>
 
@@ -21,12 +21,12 @@
         <menu>
             <item
                 android:id="@+id/facebook_pokemon"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="Facebook Pokemon" />
+                android:icon="@drawable/pik"
+                android:title="Facebook" />
             <item
                 android:id="@+id/youtube_pokemon"
-                android:icon="@drawable/ic_menu_slideshow"
-                android:title="Youtube Pokemon" />
+                android:icon="@drawable/charm"
+                android:title="Youtube" />
         </menu>
     </item>
 

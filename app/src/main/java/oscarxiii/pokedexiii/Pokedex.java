@@ -92,6 +92,9 @@ public class Pokedex extends AppCompatActivity
             fragment = new ListaTypes();
             transaccion = true;
         } else if (id == R.id.favoritos) {
+            Intent i = new Intent(this, SettingsActivity.class);
+            startActivity(i);
+
 
         }  else if (id == R.id.facebook_pokemon) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/CPokemon/")));
