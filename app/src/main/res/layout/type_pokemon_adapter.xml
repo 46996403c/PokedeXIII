@@ -9,24 +9,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tipo: "
-            android:id="@+id/textView"
-            android:layout_marginLeft="43dp"
-            android:layout_marginStart="43dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="20dp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="TipoPokemon"
             android:id="@+id/pokemonTipo"
+            android:layout_marginTop="26dp"
+            android:textSize="20dp"
+            android:background="#ffffff"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/textView"
-            android:layout_toEndOf="@+id/textView"
-            android:layout_marginTop="20dp"
-            android:textStyle="italic" />
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
