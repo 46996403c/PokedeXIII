@@ -1,8 +1,11 @@
 package oscarxiii.pokedexiii;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -12,15 +15,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class Pokedex extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Pokedex extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     Fragment fragment;
+    SharedPreferences prefs;
+
+    // Preference change listener
+    private PreferenceChangeListener mPreferenceListener = null;
+    MediaPlayer mediaPlayerEsp;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pokedex);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ApplySettings();
+
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        mPreferenceListener = new PreferenceChangeListener();
+        prefs.registerOnSharedPreferenceChangeListener(mPreferenceListener);
+
+
 /*
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,6 +64,38 @@ public class Pokedex extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
+        }
+    }
+
+    // Handle preferences changes
+    private class PreferenceChangeListener implements
+            SharedPreferences.OnSharedPreferenceChangeListener {
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+            ApplySettings();
+        }
+    }
+
+    public void ApplySettings() {
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        mediaPlayerEsp = MediaPlayer.create(getBaseContext(), R.raw.pokemon_esp);
+
+        if(pref.getString("activar_musica", "0").equals("1")) {
+            mediaPlayerEsp.setVolume(100, 100);
+            mediaPlayerEsp.setLooping(false);
+            mediaPlayerEsp.start();
+            System.out.print("ENCENDIDO");
+        }
+        if(pref.getString("activar_musica", "0").equals("0")){
+            if (mediaPlayerEsp.isPlaying()){
+                mediaPlayerEsp.stop();
+                mediaPlayerEsp.reset();
+                mediaPlayerEsp.release();
+                mediaPlayerEsp = null;
+                System.out.print("FUNCIONANADOOAPAGADOOO");
+            }
+            System.out.print("APAGADOOO");
+
         }
     }
 
@@ -94,8 +142,6 @@ public class Pokedex extends AppCompatActivity
         } else if (id == R.id.favoritos) {
             Intent i = new Intent(this, SettingsActivity.class);
             startActivity(i);
-
-
         }  else if (id == R.id.facebook_pokemon) {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/CPokemon/")));
 
